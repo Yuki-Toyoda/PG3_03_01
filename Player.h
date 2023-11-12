@@ -34,6 +34,5 @@ private: // メンバ変数
 
 	// テクスチャ
 	int textureHandle_;
-
 };
 
