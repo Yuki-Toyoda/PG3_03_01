@@ -119,6 +119,8 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClCompile Include="Clear.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="ICommand.cpp" />
+    <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="Iscene.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyInput.cpp" />
@@ -158,6 +160,8 @@ xcopy C:\KamataEngine\DirectXGame\Resources "$(OutDirFullPath)NoviceResources" /
     <ClInclude Include="Clear.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="GameManager.h" />
+    <ClInclude Include="ICommand.h" />
+    <ClInclude Include="InputHandler.h" />
     <ClInclude Include="Iscene.h" />
     <ClInclude Include="MyEnum.h" />
     <ClInclude Include="MyInput.h" />

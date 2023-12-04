@@ -38,6 +38,12 @@
     <Filter Include="KamataEngine\Enemy">
       <UniqueIdentifier>{613022e2-f568-4b10-be82-eb2a1ae65eb6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="KamataEngine\Command">
+      <UniqueIdentifier>{8e2d6794-e678-46a9-bb85-341f1742aa87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KamataEngine\Bullet">
+      <UniqueIdentifier>{0878025a-88c6-44ff-a08e-649e4960aeb3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.cpp">
@@ -86,8 +92,14 @@
     <ClCompile Include="Enemy.cpp">
       <Filter>KamataEngine\Enemy</Filter>
     </ClCompile>
+    <ClCompile Include="ICommand.cpp">
+      <Filter>KamataEngine\Command</Filter>
+    </ClCompile>
     <ClCompile Include="Bullet.cpp">
-      <Filter>KamataEngine</Filter>
+      <Filter>KamataEngine\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="InputHandler.cpp">
+      <Filter>KamataEngine\Input</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -197,6 +209,14 @@
     <ClInclude Include="Enemy.h">
       <Filter>KamataEngine\Enemy</Filter>
     </ClInclude>
-    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="ICommand.h">
+      <Filter>KamataEngine\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>KamataEngine\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="InputHandler.h">
+      <Filter>KamataEngine\Input</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

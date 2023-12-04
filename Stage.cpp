@@ -5,6 +5,12 @@ void Stage::Initialize()
 	// シーン番号初期化
 	SceneNo_ = STAGE;
 
+	// 入力管理クラスインスタンス生成
+	handler_ = std::make_unique<InputHandler>();
+
+	handler_->AssignMoveLeftCommand2PressKeyA();
+	handler_->AssignMoveLeftCommand2PressKeyD();
+
 	// プレイヤー初期化
 	player_ = std::make_unique<Player>();
 	player_->Initialize();
@@ -19,6 +25,13 @@ void Stage::Initialize()
 
 void Stage::Update()
 {
+	// コマンド取得
+	command_ = handler_->HandleInput();
+
+	if (command_) {
+		command_->Exec(*player_.get());
+	}
+
 	// プレイヤー更新
 	player_->Update(bullet_.get());
 	// 弾更新

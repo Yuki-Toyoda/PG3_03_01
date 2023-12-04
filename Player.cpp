@@ -13,19 +13,6 @@ void Player::Initialize()
 
 void Player::Update(Bullet* bullet)
 {
-	if (MyInput::GetKeybordState(DIK_RIGHTARROW, Press)) {
-		if (position_.x >= 1280.0f - 32.0f)
-			position_.x = 1280.0f - 32.0f;
-		else
-			position_.x += 5.0f;
-	}
-	else if (MyInput::GetKeybordState(DIK_LEFTARROW, Press)) {
-		if (position_.x <= 32.0f)
-			position_.x = 32.0f;
-		else
-			position_.x -= 5.0f;
-	}
-
 	if (MyInput::GetKeybordState(DIK_SPACE, Trigger))
 		bullet->position_ = position_;
 }
@@ -42,4 +29,20 @@ void Player::Draw()
 		textureHandle_,
 		0xFFFFFFFF
 	);
+}
+
+void Player::MoveRight()
+{
+	if (position_.x >= 1280.0f - 32.0f)
+		position_.x = 1280.0f - 32.0f;
+	else
+		position_.x += 5.0f;
+}
+
+void Player::MoveLeft()
+{
+	if (position_.x <= 32.0f)
+			position_.x = 32.0f;
+		else
+			position_.x -= 5.0f;
 }

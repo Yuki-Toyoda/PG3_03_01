@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "Bullet.h"
 #include "Enemy.h"
+#include "InputHandler.h"
 
 /// <summary>
 /// ステージシーン
@@ -27,6 +28,10 @@ public: // メンバ関数
 	void Draw() override;
 
 private: // メンバ変数
+
+	// 入力管理クラス
+	std::unique_ptr<InputHandler> handler_;
+	ICommand* command_ = nullptr;
 
 	// プレイヤー
 	std::unique_ptr<Player> player_;

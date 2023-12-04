@@ -25,6 +25,18 @@ public: // メンバ関数
 	/// </summary>
 	void Draw();
 
+public: // その他関数
+
+	/// <summary>
+	/// 右に移動する関数
+	/// </summary>
+	void MoveRight();
+
+	/// <summary>
+	/// 左に
+	/// </summary>
+	void MoveLeft();
+
 private: // メンバ変数
 
 	// 座標
